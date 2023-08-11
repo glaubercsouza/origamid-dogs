@@ -17,3 +17,23 @@ border: 1px solid transparent;
 transition: 0.1s;
 cursor: pointer;
 }
+
+.nav a:hover,
+.nav a:focus,
+.nav button:hover,
+.nav button:focus {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px #EEEEEE;
+  border-color: #333333;
+  outline: none;
+}
+
+.nav a:global(.active) {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px #FFEEAA;
+  border-color: #FFBB11;
+}
+
+.nav a:global(.active) svg > * {
+  fill: #FFBB11;
+}
