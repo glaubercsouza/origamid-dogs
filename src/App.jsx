@@ -15,7 +15,7 @@ import NotFound from './Components/NotFound';
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter basename="../index.html">
+      <BrowserRouter basename="/index.html">
         <UserStorage>
           <Header />
           <main className="AppBody">
