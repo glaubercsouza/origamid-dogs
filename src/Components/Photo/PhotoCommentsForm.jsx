@@ -2,8 +2,8 @@ import React from 'react';
 import { ReactComponent as Enviar } from '../../Assets/enviar.svg';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
-import { COMMENT_POST } from '../../Api';
-import styles from './PhotoCommentsForm.module.css'
+import { COMMENT_POST } from '../../api';
+import styles from './PhotoCommentsForm.module.css';
 
 const PhotoCommentsForm = ({ id, setComments, single }) => {
   const [comment, setComment] = React.useState('');
@@ -20,8 +20,12 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
   }
 
   return (
-    <form className={`${styles.form} ${single ? styles.single : ''}`} onSubmit={handleSubmit}>
-      <textarea className={styles.textarea}
+    <form
+      className={`${styles.form} ${single ? styles.single : ''}`}
+      onSubmit={handleSubmit}
+    >
+      <textarea
+        className={styles.textarea}
         id="comment"
         name="commment"
         placeholder="Comente..."
